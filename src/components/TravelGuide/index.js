@@ -19,6 +19,7 @@ class TravelGuide extends Component {
     const url = 'https://apis.ccbp.in/tg/packages'
     const response = await fetch(url)
     const data = await response.json()
+    //Is Getting data from API
     if (response.ok) {
       const updatedData = data.packages.map(eachPlace => ({
         id: eachPlace.id,
